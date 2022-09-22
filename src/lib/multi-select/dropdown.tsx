@@ -88,6 +88,8 @@ const Dropdown = () => {
     e.preventDefault();
   };
 
+  // use key for what?
+  //  trigger KEY.ENTER, KEY.ARROW_DOWN, KEY.SPACE, KEY.ESCAPE
   useKey([KEY.ENTER, KEY.ARROW_DOWN, KEY.SPACE, KEY.ESCAPE], handleKeyDown, {
     target: wrapper,
   });
