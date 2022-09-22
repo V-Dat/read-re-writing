@@ -9,12 +9,12 @@ import DefaultLayout, {
 // Pages
 import Counter from "src/pages/Counter/Counter";
 import Home from "src/pages/Home/Home";
-import ChoseGifts from "src/pages/ChoseGifts/ChoseGifts";
+import SelectMultiPage from "src/pages/SelectMultiPage/SelectMultiPage";
 
 // Public routes
 const publicRoutes: PublicRoutes = [
   { path: NAVIGATION_PATH.HOME, component: Home, layout: DefaultLayout },
-  { path: NAVIGATION_PATH.HOME, component: ChoseGifts, layout: DefaultLayout },
+  { path: NAVIGATION_PATH.SELECT_MULTI, component: SelectMultiPage, layout: DefaultLayout },
   { path: NAVIGATION_PATH.ABOUT, component: Counter, layout: Fragment },
   { path: NAVIGATION_PATH.LOGIN, component: Counter, layout: Fragment },
 ];
