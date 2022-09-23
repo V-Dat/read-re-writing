@@ -1,6 +1,5 @@
-import React from "react";
 import { useState } from "react";
-import MultiSelect from "../../../lib/multi-select/index";
+import MultiSelect from "../../../lib/react-multi-select-component/multi-select/index";
 
 function SelectMulti({ options }: any) {
   const [selected, setSelected] = useState([]);
@@ -14,6 +13,7 @@ function SelectMulti({ options }: any) {
         value={selected}
         onChange={setSelected}
         labelledBy="Select"
+        isOpen={true}
         // disableSearch={true}
       />
     </div>

@@ -20,7 +20,7 @@ const Dropdown = () => {
     t,
     onMenuToggle,
     ArrowRenderer,
-    shouldToggleOnHover,
+    shouldToggleOnHover = true,
     isLoading,
     disabled,
     onChange,
@@ -49,7 +49,7 @@ const Dropdown = () => {
 
   useDidUpdateEffect(() => {
     // console.log(1111, "did update effect");
-    //  this function trigger when user click on INPUT MULTI-SELECT
+    //  this function trigger when user click on INPUT MULTI-SELECT to show dropdown
     onMenuToggle && onMenuToggle(expanded);
   }, [expanded]);
 
@@ -58,7 +58,7 @@ const Dropdown = () => {
     if (defaultIsOpen === undefined && typeof isOpen === "boolean") {
       // console.log("THIS EFFECT WILL RUN WHEN DEVELOPER PASSING FOLLOWING PROPS :  defaultIsOpen && isOpen ");
       // THIS EFFECT WILL RUN WHEN DEVELOPER PASSING FOLLOWING PROPS :  defaultIsOpen && isOpen
-      setIsInternalExpand(false);
+      setIsInternalExpand(true);
       setExpanded(isOpen);
     }
   }, [isOpen]);
@@ -95,12 +95,15 @@ const Dropdown = () => {
   });
 
   const handleHover = (iexpanded: boolean) => {
+    console.log(333, isInternalExpand);
     isInternalExpand && shouldToggleOnHover && setExpanded(iexpanded);
   };
 
   const handleFocus = () => !hasFocus && setHasFocus(true);
 
   const handleBlur = (e) => {
+    // console.log(1111, e.currentTarget);
+    // console.log(2222, e.relatedTarget);
     if (!e.currentTarget.contains(e.relatedTarget) && isInternalExpand) {
       setHasFocus(false);
       setExpanded(false);
@@ -136,10 +139,15 @@ const Dropdown = () => {
       onMouseLeave={handleMouseLeave}
     >
       <div className="dropdown-heading" onClick={toggleExpanded}>
+        {/* 1. value user selected   */}
         <div className="dropdown-heading-value">
           <DropdownHeader />
         </div>
+
+        {/* 2. loading if asynchronous */}
         {isLoading && <Loading />}
+
+        {/* 3. button clear all state */}
         {value.length > 0 && ClearSelectedIcon !== null && (
           <button
             type="button"
@@ -153,6 +161,8 @@ const Dropdown = () => {
         )}
         <FinalArrow expanded={expanded} />
       </div>
+
+      {/* 4. Dropdown pannel */}
       {expanded && (
         <div className="dropdown-content">
           <div className="panel-content">

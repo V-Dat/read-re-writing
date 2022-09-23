@@ -3,7 +3,7 @@
  * user selects the component.  It encapsulates the search filter, the
  * Select-all item, and the list of options.
  */
- import React, {
+import React, {
   useCallback,
   useEffect,
   useMemo,

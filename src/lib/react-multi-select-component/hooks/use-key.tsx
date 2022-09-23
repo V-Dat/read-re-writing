@@ -52,7 +52,7 @@ function useKey(
 
   useEffect(() => {
     // tại sao lại phải lưu callback ref = callback ? tại sao  phải chạy hàm này mỗi lần re-render
-    console.log(callbackRef.current);
+    // console.log(callbackRef.current);
     callbackRef.current = callback;
   });
 

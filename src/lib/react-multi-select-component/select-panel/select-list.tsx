@@ -1,7 +1,6 @@
 /**
  * This component represents an unadorned list of SelectItem (s).
  */
-import React from "react";
 
 import { useMultiSelect } from "../hooks/use-multi-select";
 import { Option } from "../lib/interfaces";

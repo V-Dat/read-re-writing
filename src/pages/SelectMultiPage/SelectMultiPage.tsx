@@ -1,8 +1,7 @@
-import React from "react";
 import SelectMulti from "./SelectMulti/SelectMulti";
 // import SelectMulti from "../../lib/multi-select/index";
-import SelectMultiDisable from "./SelectMultiDisable/SelectMultiDisable";
-import SelectMultiWithSearch from "./SelectMultiWithSearch/SelectMultiWithSearch";
+// import SelectMultiDisable from "./SelectMultiDisable/SelectMultiDisable";
+// import SelectMultiWithSearch from "./SelectMultiWithSearch/SelectMultiWithSearch";
 
 const optionsNoDisable = [
   { label: "Grapes 🍇", value: "grapes" },
@@ -11,19 +10,18 @@ const optionsNoDisable = [
   { label: "Mango2 🥭🥭🥭", value: "Mango2" },
   { label: "Strawberry 🍓", value: "strawberry" },
 ];
-
-const optionsDisable = [
-  { label: "Grapes 🍇", value: "grapes" },
-  { label: "Mango0 🥭", value: "Mango0" },
-  { label: "Mango1 🥭🥭", value: "Mango1", disabled: true },
-  { label: "Mango2 🥭🥭🥭", value: "Mango2", disabled: true },
-  { label: "Strawberry 🍓", value: "strawberry", disabled: true },
-];
+// const optionsDisable = [
+//   { label: "Grapes 🍇", value: "grapes" },
+//   { label: "Mango0 🥭", value: "Mango0" },
+//   { label: "Mango1 🥭🥭", value: "Mango1", disabled: true },
+//   { label: "Mango2 🥭🥭🥭", value: "Mango2", disabled: true },
+//   { label: "Strawberry 🍓", value: "strawberry", disabled: true },
+// ];
 
 function SelectMultiPage() {
-  const selectMultiSearchLabel = "SelectMultil + Search >> Fruits";
-  const selectMultiSearchDisableLabel =
-    "SelectMultil + Search + Disable >> Fruits";
+  // const selectMultiSearchLabel = "SelectMultil + Search >> Fruits";
+  // const selectMultiSearchDisableLabel =
+  //   "SelectMultil + Search + Disable >> Fruits";
   return (
     <div className="SelectMultiPage-root">
       <div>
