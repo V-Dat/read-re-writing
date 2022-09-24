@@ -3,6 +3,7 @@ export const NAVIGATION_PATH = {
   SELECT_MULTI: "/select-multis",
   ABOUT: "/about",
   LOGIN: "/login",
+  TAG_INPUT: "/tag-input",
 };
 
 export const API_PATH = {

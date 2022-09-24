@@ -111,6 +111,7 @@ export const TagsInput = ({
 
   return (
     <div aria-labelledby={name} className={cc("rti--container", RTIContainer)}>
+
       {tags.map(tag => (
         <Tag key={tag} text={tag} remove={onTagRemove} disabled={disabled} />
       ))}

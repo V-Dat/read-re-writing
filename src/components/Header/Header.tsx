@@ -1,5 +1,6 @@
 import "./Header.scss";
 import { Link, useLocation } from "react-router-dom";
+import { publicRoutes } from "src/routes";
 
 function Header() {
   const location = useLocation();
@@ -7,10 +8,9 @@ function Header() {
   return (
     <>
       <div className="header-root">
-        <Link to="/">Home</Link>
-        <Link to="/select-multis">Select-multis</Link>
-        <Link to="/about">About</Link>
-        <Link to="/login">Login</Link>
+        {publicRoutes.map((route) => (
+          <Link key={route.name} to={route.path}>{route.name}</Link>
+        ))}
       </div>
       <div>current location : {location.pathname}</div>
     </>
