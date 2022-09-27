@@ -1,0 +1,63 @@
+.tag-input-root {
+  --rti-bg: #fff;
+  --rti-border: #ccc;
+  --rti-main: #3182ce;
+  --rti-radius: 0.375rem;
+  --rti-s: 0.5rem;
+  --rti-tag: #edf2f7;
+  --rti-tag-remove: #e53e3e;
+  --rti-tag-padding: 0.15rem 0.25rem;
+  --rti-warning: red;
+
+  align-items: center;
+  background: var(--rti-bg);
+  border: 1px solid var(--rti-border);
+  border-radius: var(--rti-radius);
+  display: flex;
+  gap: var(--rti-s);
+  line-height: 1.4;
+  padding: var(--rti-s);
+  position: relative;
+
+  .tag-input-root--warning {
+    border: 1px solid red;
+  }
+
+  input {
+    border: 0px;
+    outline: 0px;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    min-width: 120px;
+  }
+
+  .warning-message {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    color: var(--rti-warning);
+    padding: 0;
+    margin: 0;
+  }
+
+  .tag-root {
+    align-items: center;
+    background: var(--rti-tag);
+    border-radius: var(--rti-radius);
+    display: inline-flex;
+    justify-content: center;
+    padding: var(--rti-tag-padding);
+    button {
+      background: none;
+      border: 0px;
+      border-radius: 50%;
+      cursor: pointer;
+      line-height: inherit;
+      padding: 0 var(--rti-s);
+      &:hover {
+        color: var(--rti-tag-remove);
+      }
+    }
+  }
+}
